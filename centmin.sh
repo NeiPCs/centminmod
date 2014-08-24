@@ -285,6 +285,7 @@ INTELOPT='y'
 FPMRPM_LIBEVENT=n
 FPMRPM_MEMCACHED=n
 CENTALTREPO_DISABLE=y
+AXIVOREPO_DISABLE=y
 ###############################################################
 
 MACHINE_TYPE=`uname -m` # Used to detect if OS is 64bit or not.
