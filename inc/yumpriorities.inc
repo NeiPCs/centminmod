@@ -304,6 +304,7 @@ cecho "*************************************************" $boldgreen
 cat /etc/yum.repos.d/percona-release.repo
 echo ""
 fi
+fi
 
 }
 
