@@ -82,10 +82,8 @@ fi
 yum clean all -q
 yumcentossixdownload
 yumcentossevendownload
-
 axelsetup
 geoipinstall
-
 
 # use Remi's ImageMagicK 6.8.9 package
 if [[ "$REMIREPO_DISABLE" = [nN] ]]; then
@@ -102,6 +100,8 @@ if [[ "$REMIREPO_DISABLE" = [nN] ]]; then
     echo
   fi
 fi
+
+yum -y update
 
 } 2>&1 | tee ${CENTMINLOGDIR}/centminmod_yumtimes_${DT}.log
 
