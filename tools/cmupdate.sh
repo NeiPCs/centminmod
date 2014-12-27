@@ -46,7 +46,7 @@ updatecm() {
     cecho "* Update Centmin Mod Source Code Only" $boldgreen
     echo "*************************************************"
     echo
-	branchname=123.08centos7beta01
+	branchname=123.08geoip
 	rm -rf /usr/local/src/${branchname}.zip
 	rm -rf /usr/local/src/centminmod-${branchname}
 	wget -cnv --no-check-certificate -O /usr/local/src/${branchname}.zip https://github.com/centminmod/centminmod/archive/${branchname}.zip
