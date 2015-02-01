@@ -167,6 +167,9 @@ NGX_MEMCLINK="https://github.com/agentzh/memc-nginx-module/tarball/v${ORESTY_MEM
 NGX_SRCACHELINKFILE="srcache-nginx-module_v${ORESTY_SRCCACHEVER}.tar.gz"
 NGX_SRCACHELINK="https://github.com/agentzh/srcache-nginx-module/tarball/v${ORESTY_SRCCACHEVER}"
 
+NGX_SLOWFSLINKFILE="ngx_slowfs_cache-${NGINX_SLOWFSVER}.tar.gz"
+NGX_SLOWFSLINK="http://labs.frickle.com/files/${NGX_SLOWFSLINKFILE}"
+
 LIBEVENTLINKFILE="release-${LIBEVENT_VERSION}-stable.tar.gz"
 LIBEVENTLINKOLD="https://github.com/downloads/libevent/libevent/${LIBEVENTLINKFILE}"
 LIBEVENTLINK="https://github.com/libevent/libevent/archive/${LIBEVENTLINKFILE}"

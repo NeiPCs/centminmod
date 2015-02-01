@@ -445,6 +445,34 @@ else
 echo ""
 	fi
 
+        cecho "Download ${NGX_SLOWFSLINKFILE} ..." $boldyellow
+    if [ -s ${NGX_SLOWFSLINKFILE} ]; then
+        cecho "${NGX_SLOWFSLINKFILE} Archive found, skipping download..." $boldgreen
+    else
+        wget -c --progress=bar --no-check-certificate ${NGX_SLOWFSLINK} --tries=3 
+ERROR=$?
+    if [[ "$ERROR" != '0' ]]; then
+    cecho "Error: ${NGX_SLOWFSLINKFILE} download failed." $boldgreen
+
+checklogdetails
+    exit #$ERROR
+else 
+         cecho "Download done." $boldyellow
+#echo ""
+    fi
+    fi
+
+tar xzf ${NGX_SLOWFSLINKFILE} 
+ERROR=$?
+    if [[ "$ERROR" != '0' ]]; then
+    cecho "Error: ${NGX_SLOWFSLINKFILE} extraction failed." $boldgreen
+checklogdetails
+    exit #$ERROR
+else 
+         cecho "${NGX_SLOWFSLINKFILE} valid file." $boldyellow
+echo ""
+    fi
+
 nginxpcretarball
 nginxwebdavtarball
 nginxpgspeedtarball
